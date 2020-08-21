@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    
+    罗豪</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="罗豪" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="jumbotron">
+  <div class="video">
+    
+      <div class="video-frame">
+        <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
+      </div>
+    
+    <div class="video-media">
+      <video playsinline="" autoplay="" loop="" muted="" data-autoplay=""
+             poster="/images/ocean/ocean.png" x5-video-player-type="h5">
+        <source src="/images/ocean/ocean.mp4" type="video/mp4">
+        <source src="/images/ocean/ocean.ogv" type="video/ogg">
+        <source src="/images/ocean/ocean.webm" type="video/webm">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="video-inner text-center text-white">
+      <h1><a href="/">罗豪</a></h1>
+      <p></p>
+      <div><img src="/images/hexo-inverted.svg" class="brand" alt="罗豪"></div>
+    </div>
+    <div class="video-learn-more">
+      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
+    </div>
+  </div>
+</section>
+
+<div id="landingpage">
+  <section class="outer">
+    <article class="articles">
+      
+      <h1 class="page-type-title"></h1>
+      
+        
+          <article id="post-工作小计" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/20/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E8%AE%A1/">docker学习小计</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/20/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E8%AE%A1/" class="article-date">
+  <time datetime="2020-08-20T10:15:42.169Z" itemprop="datePublished">2020-08-20</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    
+        <h1 id="docker学习小计"   >
+          <a href="#docker学习小计" class="heading-link"><i class="undefined"></i></a>docker学习小计</h1>
+      
+        <h4 id="docker-常用命令"   >
+          <a href="#docker-常用命令" class="heading-link"><i class="undefined"></i></a>docker 常用命令</h4>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker version        ##查看版本</span><br><span class="line">docker --help        ##</span><br><span class="line">docker info            ##docker详细的版本信息</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h4 id="镜像命令"   >
+          <a href="#镜像命令" class="heading-link"><i class="undefined"></i></a>镜像命令</h4>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker images       ##查看本机镜像 -a显示全部 -q显示id</span><br><span class="line">docker search        ##搜索镜像  --filter=stars=3000 --filter=stars=3000 下载stars&gt;=3000的</span><br><span class="line">docker pull            ##下载 ：---&gt;:指定版本号</span><br><span class="line">docker remove        ##删除镜像   rmi -f删除所有  -i是根据id删除  缩写 docker rmi -f id名</span><br></pre></td></tr></table></div></figure>
+
+
+        <h5 id="使用镜像命令pull时错误"   >
+          <a href="#使用镜像命令pull时错误" class="heading-link"><i class="undefined"></i></a>使用镜像命令pull时错误</h5>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"> docker pull mysql:5.7</span><br><span class="line">Error response from daemon: Get https://registry-1.docker.io/v2/library/mysql/manifests/5.7: Get https://auth.docker.io/token?scope=repository%3Alibrary%2Fmysql%3Apull&amp;service=registry.docker.io: dial tcp: lookup auth.docker.io on 8.8.8.8:53: read udp 192.168.141.1:45130-&gt;8.8.8.8:53: i/o timeout</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#解析ip不可用</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#解决办法</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">1.先下载<span class="built_in">bind</span>-utils工具</span></span><br><span class="line">yum install bind-utils</span><br><span class="line"><span class="meta">#</span><span class="bash">2.下载成功后使用查询可用big查询可用的ip</span></span><br><span class="line">big @114.114.114.114 registry-1.docker.io</span><br><span class="line"></span><br><span class="line">; &lt;&lt;&gt;&gt; DiG 9.11.4-P2-RedHat-9.11.4-16.P2.el7_8.6 &lt;&lt;&gt;&gt; @114.114.114.114 registry-1.docker.io</span><br><span class="line">; (1 server found)</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 17089</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 8, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 512</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;registry-1.docker.io.        IN    A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">registry-1.docker.io.    32    IN    A    3.218.162.19</span><br><span class="line">registry-1.docker.io.    32    IN    A    107.23.149.57</span><br><span class="line">registry-1.docker.io.    32    IN    A    52.1.121.53</span><br><span class="line">registry-1.docker.io.    32    IN    A    3.94.35.164</span><br><span class="line">registry-1.docker.io.    32    IN    A    18.232.227.119</span><br><span class="line">registry-1.docker.io.    32    IN    A    52.4.20.24</span><br><span class="line">registry-1.docker.io.    32    IN    A    35.174.73.84</span><br><span class="line">registry-1.docker.io.    32    IN    A    23.22.155.84</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">3.选择当中可用ip去/etc/hosts目录下去修改docker.io的域名解析到其它可用IP</span></span><br><span class="line">cd ..</span><br><span class="line">cd ..</span><br><span class="line">vi /etc/host</span><br><span class="line"><span class="meta">#</span><span class="bash">4.将可用ip保存到host文件中并且退出</span></span><br><span class="line">107.23.149.57  registry-1.docker.io</span><br><span class="line"><span class="meta">#</span><span class="bash">5.重启docker后重新下载即可</span></span><br><span class="line">systemctl restart docker</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+        <h5 id="docker-pull-慢"   >
+          <a href="#docker-pull-慢" class="heading-link"><i class="undefined"></i></a>docker pull 慢</h5>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">进入docker在本机的配置目录：</span></span><br><span class="line"><span class="meta">#</span><span class="bash">命令：<span class="built_in">cd</span> /etc/docker</span></span><br><span class="line"><span class="meta">#</span><span class="bash">找到daemon.json文件，如果没有就新建一个 写入内容：</span></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;:[&quot;https://almtd3fa.mirror.aliyuncs.com&quot;]      </span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span><span class="bash">最后重启docker服务</span></span><br><span class="line">service docker restart</span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+
+        <h4 id="容器命令"   >
+          <a href="#容器命令" class="heading-link"><i class="undefined"></i></a>容器命令</h4>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#启动docker镜像</span></span></span><br><span class="line">docker run [可选参数]  imag    </span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># --name=&quot;&quot;容器名字 -d后台方式运行 -it 交互方式运行：进入容器查看内容  -p主机端口：容器端口</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#退出容器 exit</span></span></span><br><span class="line">docker ps          #查看正在运行中的容器   </span><br><span class="line">docker ps -a    #查看正在运行中的容器 +停止过的容器</span><br><span class="line">docker ps -n=?     #查看最近创建的容器</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#退出停止docker镜像</span></span></span><br><span class="line">exit             ##直接退出容器并且停止</span><br><span class="line">Ctrl + P + Q    ##不停止退出容器</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#删除容器</span></span></span><br><span class="line">docker rm 容器id    ##删除容器  不能删除正在运行的容器   docker rmi 容器id 是删除镜像</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#启动和停止容器</span></span></span><br><span class="line">docker start 容器id</span><br><span class="line">docker restart 容器id</span><br><span class="line">docker stop 容器id</span><br><span class="line">docker kill 容器id</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#进入正在运行的容器</span></span></span><br><span class="line">docker exec -it 容器id /bin/bash## -d后台方式运行 -it 交互方式运行：进入容器查看内容  -p主机端口：容器端口</span><br><span class="line">docker attach 容器id         ##进入当前容器正在运行的命令行</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#查看日志</span></span></span><br><span class="line">docker logs 容器id        ## -ft显示所有日志信息 --tail 动态查看日志</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#查看容器内部的进程信息</span></span></span><br><span class="line">docker top 容器id</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#查看镜像源数据</span></span></span><br><span class="line">docker inspect </span><br><span class="line"></span><br></pre></td></tr></table></div></figure>
+
+
+        <h5 id="从容器内拷贝文件到主机上"   >
+          <a href="#从容器内拷贝文件到主机上" class="heading-link"><i class="undefined"></i></a>从容器内拷贝文件到主机上</h5>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/路径 /粘贴路径 </span><br></pre></td></tr></table></div></figure>
+
+
+        <h5 id="Commit-创建新的镜像"   >
+          <a href="#Commit-创建新的镜像" class="heading-link"><i class="undefined"></i></a>Commit 创建新的镜像</h5>
+        <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -a=&#x27;&#x27; -m=&#x27;&#x27;  容器id 容器名称:版本号  ##-a作者 -m 备注</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+
+        <h4 id="容器数据卷"   >
+          <a href="#容器数据卷" class="heading-link"><i class="undefined"></i></a>容器数据卷</h4>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v \主机地址项目：容器目录 -e    #容器数据卷挂载 vue双向绑定类似 -e配置文件  匿名挂载</span><br><span class="line">docker run -it -v 名称:\主机地址项目：#具名挂载</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">####:ro--&gt;只读 只能通过宿主机操作容器不可操作   :rw--&gt;可读可写</span></span></span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h5 id="dockerfile脚本生成镜像"   >
+          <a href="#dockerfile脚本生成镜像" class="heading-link"><i class="undefined"></i></a>dockerfile脚本生成镜像</h5>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建编写DockFile脚本 </span></span><br><span class="line">FROM centos</span><br><span class="line">VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]</span><br><span class="line">CMD echo &quot;----end----&quot;</span><br><span class="line">CMD /bin/bash</span><br><span class="line"><span class="meta">#</span><span class="bash">运行编写好的DockFile文件</span></span><br><span class="line">docker build -f DockFile -t luohao/centos .</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#######--volumes-from 继承名称 数据共享+持久化本地（备份） </span></span></span><br></pre></td></tr></table></div></figure>
+
+<h6 id=""><a href="#" class="headerlink" title=""></a></h6>
+        <h4 id="DockFile-学习"   >
+          <a href="#DockFile-学习" class="heading-link"><i class="undefined"></i></a>DockFile 学习</h4>
+      
+        <h6 id="文件构建步骤"   >
+          <a href="#文件构建步骤" class="heading-link"><i class="undefined"></i></a>文件构建步骤</h6>
+      <p>​            1.创建并且编写一个dockerfile文件</p>
+<p>​            2.docker build构建成一个镜像</p>
+<p>​            3.docker run 运行镜像</p>
+<p>​            4.docker push 发布镜像（DockerHub）</p>
+<figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">指令                            <span class="comment">#说明</span></span></span><br><span class="line">FROM                         #设置镜像使用的基础镜像</span><br><span class="line">MAINTAINER                     #设置镜像的作者</span><br><span class="line">RUN                             #编译镜像时运行的脚本</span><br><span class="line">CMD                             #设置容器的启动命令</span><br><span class="line">LABEL                         #设置镜像的标签</span><br><span class="line">EXPOESE                         #设置镜像暴露的端口</span><br><span class="line">ENV                             #设置容器的环境变量</span><br><span class="line">ADD                             #编译镜像时复制文件到镜像中 如果是压缩包就会解压</span><br><span class="line">COPY                         #编译镜像时复制文件到镜像中</span><br><span class="line">ENTRYPOINT                     #设置容器的入口程序</span><br><span class="line">VOLUME                         #设置容器的挂载卷</span><br><span class="line">USER                         #设置运行RUN CMD ENTRYPOINT的用户名</span><br><span class="line">WORKDIR                         #设置RUN CMD ENTRYPOINT COPY ADD指令的工作目录</span><br><span class="line">ARG                             #设置编译镜像时加入的参数</span><br><span class="line">ONBUILD                         #设置镜像的ONBUILD指令</span><br><span class="line">STOPSIGNAL                     #设置容器的退出信号量dn</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">查看镜像是如何构建的</span></span><br><span class="line">docker history</span><br><span class="line"><span class="meta">#</span><span class="bash">CMD和ENTRYPOINT的区别 CMD不能拼接命令 ENTRYPOINT可以追加命令</span></span><br></pre></td></tr></table></div></figure>
+
+
+        <h4 id="自定义网络"   >
+          <a href="#自定义网络" class="heading-link"><i class="undefined"></i></a>自定义网络</h4>
+      <figure class="highlight shell"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker network ls        #查看所有网络</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">自定义一个网络!</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --driver bridge    桥接</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --subnet 192.168.0.0/16| 子网地址</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> --gateway 192.168.0.1  网关</span></span><br><span class="line">docker network create --driver bridge --subnet 192.168.0.0/16 --gateway 192.168.0.1 mynet</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">启动容器时指定网络  --net 网络名称</span></span><br><span class="line">docker run -d -p 8080:8080 --name tomcat01 --net 网络名称 tomcat</span><br><span class="line"><span class="meta">#</span><span class="bash">这样启动的好处可以直接通过容器名来ping通网络</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#网络连通  网络打通容器</span></span></span><br><span class="line">docker network connect 网络名 容器名</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://ohao1017.github.io/2020/08/20/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E8%AE%A1/" data-id="cke2nl28q0003eov2c8u5etlc" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+          <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/20/hello-world/">Hello World</a>
+    </h2>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/20/hello-world/" class="article-date">
+  <time datetime="2020-08-20T09:32:44.268Z" itemprop="datePublished">2020-08-20</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <p>Welcome to <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>! This is your very first post. Check <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> or you can ask me on <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>.</p>
+
+        <h2 id="Quick-Start"   >
+          <a href="#Quick-Start" class="heading-link"><i class="fas fa-link"></i></a>Quick Start</h2>
+      
+        <h3 id="Create-a-new-post"   >
+          <a href="#Create-a-new-post" class="heading-link"><i class="fas fa-link"></i></a>Create a new post</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Run-server"   >
+          <a href="#Run-server" class="heading-link"><i class="fas fa-link"></i></a>Run server</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Generate-static-files"   >
+          <a href="#Generate-static-files" class="heading-link"><i class="fas fa-link"></i></a>Generate static files</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+        <h3 id="Deploy-to-remote-sites"   >
+          <a href="#Deploy-to-remote-sites" class="heading-link"><i class="fas fa-link"></i></a>Deploy to remote sites</h3>
+      <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></div></figure>
+
+<p>More info: <span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://ohao1017.github.io/2020/08/20/hello-world/" data-id="cke2nl28n0001eov22dq5cmq7" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+
+                
+
+</article>
+        
+    </article>
+    
+  
+    
+  </section>
+</div>
+
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-bar-chart"></i> <span id="busuanzi_value_site_pv"></span></li>
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 罗豪</li>
+
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="罗豪"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">首页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+</body>
+</html>
