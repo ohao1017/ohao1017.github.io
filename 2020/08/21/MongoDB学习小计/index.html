@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    MongoDB常用命令 |
+    
+    罗豪</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="罗豪" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-MongoDB学习小计" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      MongoDB常用命令
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2020/08/21/MongoDB%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%A1/" class="article-date">
+  <time datetime="2020-08-21T02:31:34.265Z" itemprop="datePublished">2020-08-21</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="MongoDB学习"><a href="#MongoDB学习" class="headerlink" title="MongoDB学习"></a>MongoDB学习</h1><h4 id="Mongo常用命令"><a href="#Mongo常用命令" class="headerlink" title="Mongo常用命令"></a>Mongo常用命令</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> 库名    <span class="comment">----切换数据库 如果没有就创建数据库并且进入</span></span><br><span class="line"><span class="keyword">show</span> dbs      <span class="comment">---查看有权限的数据库 </span></span><br><span class="line">db      <span class="comment">--查看当前数据库</span></span><br><span class="line">db.dropdabase()        <span class="comment">--删除数据库</span></span><br><span class="line"></span><br><span class="line">db.createCollection(<span class="keyword">name</span>)    <span class="comment">--创建集合 显示创建</span></span><br><span class="line"><span class="keyword">show</span> collections    <span class="comment">--查看所有集合</span></span><br><span class="line">db.name.drop();        <span class="comment">--删除集合 name=名称</span></span><br><span class="line"></span><br><span class="line"><span class="comment">----文档的crud</span></span><br><span class="line">db.name.insert()    <span class="comment">--单条数据插入</span></span><br><span class="line">db.name.insertMany() <span class="comment">--插入多条数据</span></span><br><span class="line">db.name.find()        <span class="comment">--查询所有数据 +pretty()bson格式显示</span></span><br><span class="line">db.name.find(&#123;字段：值&#125;)    --根据条件查询所有字段</span><br><span class="line">db.name.find(&#123;字段：值&#125;，&#123;字段1，字段2&#125;)    --根据条件查询所需字段</span><br><span class="line">db.name.findOne()    <span class="comment">--查询单条数据</span></span><br><span class="line">db.name.update(&#123;条件：条件值&#125;，&#123;$set:&#123;字段：值&#125;&#125;)    --修改单条数据</span><br><span class="line">db.name.update(&#123;条件：条件值&#125;，&#123;$set:&#123;字段：值&#125;&#125;,&#123;multi:true&#125;)    --修改多条数据</span><br><span class="line">db.name.remove(&#123;条件：条件值&#125;)    --删除数据</span><br><span class="line">db.name.count(&#123;查询条件&#125;)    --统计</span><br><span class="line">db.name.find().limit(参数);     <span class="comment">--分页查询</span></span><br><span class="line">db.name.find().limit(参数).skip(参数)  <span class="comment">--skip跳过前几条</span></span><br><span class="line">db.name.find().sort(&#123;参数：1 || -1&#125;)    --1代表升序    -1表示降序</span><br><span class="line">db.name.find(&#123;字段：/值/&#125;)        --正则查询 </span><br><span class="line"></span><br><span class="line">等于            &#123;&lt;key&gt;:&lt;value&gt;&#125;                 db.col.find(&#123;&quot;字段&quot;:&quot;&quot;&#125;).pretty()                 where by = &#x27;&#x27;</span><br><span class="line">小于            &#123;&lt;key&gt;:&#123;$lt:&lt;value&gt;&#125;&#125;         db.col.find(&#123;&quot;字段&quot;:&#123;$lt:50&#125;&#125;).pretty()            where likes &lt; 50</span><br><span class="line">小于或等于      &#123;&lt;key&gt;:&#123;$lte:&lt;value&gt;&#125;&#125;       db.col.find(&#123;&quot;字段&quot;:&#123;$lte:50&#125;&#125;).pretty()         where likes &lt;= 50</span><br><span class="line">大于            &#123;&lt;key&gt;:&#123;$gt:&lt;value&gt;&#125;&#125;         db.col.find(&#123;&quot;字段&quot;:&#123;$gt:50&#125;&#125;).pretty()            where likes &gt; 50</span><br><span class="line">大于或等于      &#123;&lt;key&gt;:&#123;$gte:&lt;value&gt;&#125;&#125;       db.col.find(&#123;&quot;字段&quot;:&#123;$gte:50&#125;&#125;).pretty()           where likes &gt;= 50</span><br><span class="line">不等于           &#123;&lt;key&gt;:&#123;$ne:&lt;value&gt;&#125;&#125;        db.col.find(&#123;&quot;字段&quot;:&#123;$ne:50&#125;&#125;).pretty()            where likes != 50</span><br><span class="line"></span><br><span class="line">db.name.find(&#123;字段：&#123;$in:[&quot;值2&quot;,&quot;值2&quot;]&#125;&#125;)      --包含内容</span><br><span class="line">db.name.find(&#123;字段：&#123;$nin:[&quot;值2&quot;,&quot;值2&quot;]&#125;&#125;)     --不包含内容</span><br><span class="line">db.name.find(&#123;$and:[&#123;字段1：值1&#125;，&#123;字段2：值2&#125;]&#125;) --条件查询and</span><br><span class="line">db.name.find(&#123;$or:[&#123;字段1：值1&#125;，&#123;字段2：值2&#125;]&#125;) --条件查询or</span><br></pre></td></tr></table></figure>
+
+<h4 id="索引-Index"><a href="#索引-Index" class="headerlink" title="索引-Index"></a>索引-Index</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">db.name.getIndexes()     <span class="comment">----查看索引</span></span><br><span class="line">db.name.createIndex(&#123;字段&#125;)         ----创建单索引 1升序 -1是降序</span><br><span class="line">db.name.createIndex(&#123;字段1:值，字段2：值&#125;)         ----创建复合索引 1升序 -1是降序</span><br><span class="line"></span><br><span class="line">db.name.dropindex(&#123;字段&#125;)        --删除单个索引 可以根据名称喝字段进行删除</span><br><span class="line">db.name.dropindexes()        <span class="comment">---删除所有索引 mongo自带的id索引不会被删除</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="多联查询"><a href="#多联查询" class="headerlink" title="多联查询"></a>多联查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">db.name1.aggregate([</span><br><span class="line">&#123;</span><br><span class="line">    $lookup:&#123;</span><br><span class="line">            from: &quot;name2&quot;,</span><br><span class="line">            localField: &quot;相对应的字段&quot;,</span><br><span class="line">            foreignField: &quot;相对应的字段&quot;,</span><br><span class="line">            as: &quot;别名&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;])</span><br><span class="line">    <span class="comment">--localField：值  foreignField：值类似于  on  字段=字段</span></span><br></pre></td></tr></table></figure>
+
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://ohao1017.github.io/2020/08/21/MongoDB%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%A1/" data-id="cke3mhh240000jkv25v0hgxkg" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/08/20/%E5%B7%A5%E4%BD%9C%E5%B0%8F%E8%AE%A1/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">docker学习小计</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 罗豪</li>
+
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="罗豪"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">首页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">归档</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+</body>
+</html>
